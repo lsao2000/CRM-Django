@@ -16,7 +16,7 @@ class SignUpForm(UserCreationForm):
         super(SignUpForm, self).__init__(*args, **kwargs)
 
         self.fields['username'].widget.attrs['class']       = 'form-control'
-        self.fileds['username'].widget.attrs['placeholder'] = 'Ex : JhonWick'
+        self.fields['username'].widget.attrs['placeholder'] = 'Ex : JhonWick'
         self.fields['username'].label                       = 'Username'
         self.fields['username'].help_text                   = '<span class="form-text text-muted"><small>Required. 150 characters or fewer. Letters, digits and @/./+/-/_ only.</small></span>'
 
