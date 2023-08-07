@@ -1,0 +1,29 @@
+{% extends 'base.html' %}
+{% block title%}
+Login
+{% endblock %}
+{% block content %}
+<div class="col-md-6 offset-md-3 border border-radius p-2">
+    <h1 class="text-center">Login</h1>
+    <br>
+    <br>
+    <form method="post"  action="{% url 'login' %}">
+        {% csrf_token %}
+        <br/>   
+        <div class="mb-3">
+            <label for="">Username</label>
+            <input type="text" required placeholder="Ex : JhonWick ..." name="username" class="form-control"  aria-describedby="emailHelp">
+        </div>
+        <br/>
+        <div class="mb-3">
+            <label for="">Password</label>
+            <input type="password" required name="password" placeholder="Ex : 12LDks3@ ..." class="form-control">
+        </div>
+        <br/>
+        <div class="mx-auto w-50">
+            <button type="submit" class="btn btn-secondary w-50  Display-4 ">Login</button> &nbsp; or 
+            <a href="/register" class="text-decoration-none">Register</a>
+        </div>
+    </form>
+</div>
+{% endblock %}

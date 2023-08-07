@@ -1,0 +1,28 @@
+{% extends 'base.html' %}
+{% block title%}
+    Add User
+{% endblock%}
+{% block content%}
+    <div class="col-md-6 offset-md-3">
+        <h1>Register</h1>
+        <br/>
+        <form method="post" action="">
+            {% csrf_token %}
+            {% if form.errors %}
+                <div class="alert alert-warning alert-dismissible fade show" role="alert">
+                    {% for field in form%}
+                        {% if field.errors %}
+                            {{ field.errors }}
+                        {% endif %}
+                    {% endfor %}
+                </div>
+            {% endif %}
+            {{ form.as_p }}
+            <div class="mx-auto w-50">
+                <button type="submit" class="btn btn-secondary w-50  Display-4 ">Add User</button>
+            </div>
+        </form>
+    </div>
+{% endblock%}
+
+
