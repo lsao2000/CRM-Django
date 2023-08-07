@@ -1,0 +1,26 @@
+{% extends 'base.html' %}
+{% block title %}
+    Update
+{% endblock%}
+
+{% block content %}
+<!-- style="border: 1px solid black; border-radius: 9px; padding: 15px; align-items: center; justify-content: center; text-align: center; margin: auto; width: 50%;" -->
+
+    <div class="col-md-6 offset-md-3 border border-1 rounded-4 p-2">
+        <h1 class="text-center">Update</h1>
+        <br/>
+        <br/>
+        <form method="post" action="">
+            {% csrf_token %}
+            {{ form.as_p }}
+            <br>
+            <br>
+                <input type="submit" class="position-relative start-50 translate-middle btn btn-success">
+        </form>
+    </div>
+    <br/>
+    <br/>
+    <a href="{% url 'home'%}" class="btn btn-primary text-decoration-none text-light mb-3">Back</a>
+<!-- style="background-color: rgb(128, 127, 127); border: none; padding: 8px; margin: 3px; border-radius: 6px;" -->
+{% endblock %}
+
