@@ -6,9 +6,9 @@ urlpatterns = [
     path('login/', views.login_user, name='login'),
     path('logout/', views.logout_user, name='logout'),
     path('register/', views.register_user, name='register'),
-    path("record/<int:pk>", views.customer_record, name='record'),
+    path("Update/<int:pk>", views.Update_record, name='Update'),
     path("Delete/<int:pk>", views.DeleteRecord, name='Delete'),
-    path("AddUser/", views.AddUser, name="AddUser")
+    path("AddUser/", views.AddUser, name="AddUser"),
 ]
 
 
